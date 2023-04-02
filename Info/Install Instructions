@@ -121,7 +121,7 @@ makepkg -si
 ===================
 = Install Awesome =
 ===================
-paru -S awesome picom lf alacritty pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
+paru -S xorg-xinit awesome picom lf alacritty pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
 
 vim .xinitrc (add exec awesome)
 
