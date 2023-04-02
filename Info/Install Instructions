@@ -122,6 +122,8 @@ makepkg -si
 cd
 
 rm paru
+
+git clone https://github.com/TheHexangle/HexArc
 ===================
 = Install Awesome =
 ===================
