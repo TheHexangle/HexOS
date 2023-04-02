@@ -1,0 +1,132 @@
+================
+= Arch Install =
+==============================================================
+= Connect to Internet (Ignore if you have an ethernet cable) =
+==============================================================
+iwctl
+
+device list
+
+station device scan
+
+station device get-networks
+
+station device connect SSID
+
+ping archlinux.org
+===================
+= Partition Disks =
+===================
+cfdisk /dev/sdz
+
+Make 100M partition
+
+Make 4G partition
+
+Make 100% partition
+
+lsblk (check parition table)
+
+mkfs.ext4 /dev/sdz3
+
+mkfs.fat -F 32 /dev/sdz1
+
+mkswap /dev/sdz2
+
+mount /dev/sdz3 /mnt
+
+mkdir -p /mnt/boot/efi
+
+mount /dev/sdz1 /mnt/boot/efi
+
+swapon /dev/sdz2
+
+lsblk (check parition table)
+========================
+= Install Base Systems =
+========================
+pacstrap /mnt base base-devel linux-zen linux-firmware grub efibootmgr vim networkmanager
+=========
+= Fstab =
+=========
+genfstab /mnt
+
+genfstab /mnt > /mnt/etc/fstab
+==========
+= Chroot =
+==========
+arch-chroot /mnt
+============
+= Time Zone=
+============
+ln -sf /usr/share/zoneinfo/Amarica/Chicago /etc/localtime
+
+hwclock --systohc
+================
+= Localization =
+================
+vim /etc/locale.gen (uncomment en_US.UTF-8 UTF-8)
+
+locale-gen
+
+vim /etc/locale.conf (Add LANG=en_US.UTF-8)
+
+vim /etc/hostname (Add hexarc)
+
+passwd (make password)
+============
+= Add User =
+============
+useradd -m -G wheel -s /bin/bash hexangle
+
+passwd hexangle (make password)
+
+EDDITOR=vim visudo (uncomment %wheel ALL=(ALL) ALL)
+==================
+= Enable Daemons =
+==================
+systemctl enable NetworkManager
+========
+= Grub =
+========
+grub-install /dev/sdz
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
+exit
+
+umount -a
+
+reboot
+================
+= Post Install =
+================
+nmcli device wifi list
+
+nmcli device wifi connect (SSID_or_BSSID) password (password)
+
+vim /etc/fstab (Add 
+# /dev/sda1 
+UUID=01D96013265C5250   /mnt    ntfs    defaults        0 0 )
+================
+= Install PARU =
+================
+pacman -Syu git
+
+git clone https://aur.archlinux.org/paru.git
+
+cd paru
+
+makepkg -si
+
+cd
+
+rm paru
+===================
+= Install Awesome =
+===================
+paru -S mesa amd-ucode xorg-xinit awesome picom rofi lf alacritty htop neofetch pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
+
+vim .xinitrc (add exec awesome)
+
+startx
