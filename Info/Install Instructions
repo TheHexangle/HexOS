@@ -45,7 +45,7 @@ lsblk (check parition table)
 ========================
 = Install Base Systems =
 ========================
-pacstrap /mnt base base-devel linux-zen linux-firmware grub efibootmgr vim networkmanager
+pacstrap /mnt base base-devel linux-zen linux-firmware grub efibootmgr neovim networkmanager
 =========
 = Fstab =
 =========
