@@ -111,7 +111,7 @@ UUID=01D96013265C5250   /mnt    ntfs    defaults        0 0 )
 ================
 = Install PARU =
 ================
-pacman -Syu git ntfs-3g
+sudo pacman -Syu git ntfs-3g
 
 git clone https://aur.archlinux.org/paru.git
 
@@ -122,6 +122,10 @@ makepkg -si
 cd
 
 git clone https://github.com/TheHexangle/HexArc
+=================
+= Pacman Config =
+=================
+sudo nvim /etc/pacman.conf (Uncommemt multilib)
 ===================
 = Install Awesome =
 ===================
