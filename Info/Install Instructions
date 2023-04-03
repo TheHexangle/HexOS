@@ -69,7 +69,9 @@ nvim /etc/locale.gen (uncomment en_US.UTF-8 UTF-8)
 
 locale-gen
 
-nvim /etc/locale.conf (Add LANG=en_US.UTF-8)
+nvim /etc/locale.conf (Add 
+LC_ALL=C
+LANG=en_US.UTF-8)
 
 nvim /etc/hostname (Add hexarc)
 
