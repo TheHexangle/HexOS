@@ -65,13 +65,13 @@ hwclock --systohc
 ================
 = Localization =
 ================
-vim /etc/locale.gen (uncomment en_US.UTF-8 UTF-8)
+nvim /etc/locale.gen (uncomment en_US.UTF-8 UTF-8)
 
 locale-gen
 
-vim /etc/locale.conf (Add LANG=en_US.UTF-8)
+nvim /etc/locale.conf (Add LANG=en_US.UTF-8)
 
-vim /etc/hostname (Add hexarc)
+nvim /etc/hostname (Add hexarc)
 
 passwd (make password)
 ============
@@ -81,7 +81,7 @@ useradd -m -G wheel -s /bin/bash hexangle
 
 passwd hexangle (make password)
 
-EDDITOR=vim visudo (uncomment %wheel ALL=(ALL) ALL)
+EDDITOR=nvim visudo (uncomment %wheel ALL=(ALL) ALL)
 ==================
 = Enable Daemons =
 ==================
@@ -111,7 +111,7 @@ UUID=01D96013265C5250   /mnt    ntfs    defaults        0 0 )
 ================
 = Install PARU =
 ================
-pacman -Syu git
+pacman -Syu git ntfs-3g
 
 git clone https://aur.archlinux.org/paru.git
 
@@ -121,14 +121,12 @@ makepkg -si
 
 cd
 
-rm paru
-
 git clone https://github.com/TheHexangle/HexArc
 ===================
 = Install Awesome =
 ===================
-paru -S mesa amd-ucode xorg-xinit awesome picom rofi lf alacritty htop neofetch pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
+paru -S mesa amd-ucode xorg-xinit xorg-server awesome picom rofi lf alacritty htop neofetch pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
 
-vim .xinitrc (add exec awesome)
+nvim .xinitrc (add exec awesome)
 
 startx
