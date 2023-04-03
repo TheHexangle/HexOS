@@ -129,7 +129,7 @@ sudo nvim /etc/pacman.conf (Uncommemt multilib)
 ===================
 = Install Awesome =
 ===================
-paru -S mesa amd-ucode xorg-xinit xorg-server awesome picom rofi lf alacritty htop neofetch pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
+paru -S mesa amd-ucode xorg-xinit xorg-server ttf-monocraft awesome picom rofi lf alacritty htop neofetch pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
 
 nvim .xinitrc (add exec awesome)
 
