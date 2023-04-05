@@ -49,8 +49,6 @@ pacstrap /mnt base base-devel linux-zen linux-firmware grub efibootmgr neovim ne
 =========
 = Fstab =
 =========
-genfstab /mnt
-
 genfstab /mnt > /mnt/etc/fstab
 ==========
 = Chroot =
@@ -69,8 +67,7 @@ nvim /etc/locale.gen (uncomment en_US.UTF-8 UTF-8)
 
 locale-gen
 
-nvim /etc/locale.conf (Add 
-LC_ALL=C
+nvim /etc/locale.conf (Add
 LANG=en_US.UTF-8)
 
 nvim /etc/hostname (Add hexarc)
@@ -131,8 +128,12 @@ sudo nvim /etc/pacman.conf (Uncommemt multilib)
 ===================
 = Install Awesome =
 ===================
-paru -S mesa amd-ucode xorg-xinit xorg-server ttf-monocraft awesome picom rofi lf alacritty htop neofetch pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
+paru -S mesa amd-ucode xorg-xinit xorg-server awesome picom rofi lf alacritty htop neofetch pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
 
 nvim .xinitrc (add exec awesome)
 
 startx
+====================
+= Install Programs =
+====================
+paru -S discord
