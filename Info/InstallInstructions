@@ -136,4 +136,4 @@ startx
 ====================
 = Install Programs =
 ====================
-paru -S discord steam obs-studio davinci-resolve gimp prismlauncher lunar-client minecraft-launcher
+paru -S discord steam obs-studio davinci-resolve gimp prismlauncher lunar-client minecraft-launcher onlyoffice-bin
