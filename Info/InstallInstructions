@@ -104,14 +104,16 @@ nmcli device wifi list
 
 nmcli device wifi connect (SSID_or_BSSID) password (password)
 
+sudo pacman -Syu git ntfs-3g
+
 vim /etc/fstab (Add 
 # /dev/sda1 
 UUID=01D96013265C5250   /mnt    ntfs    defaults        0 0 )
+
+sudo mount -a
 ================
 = Install PARU =
 ================
-sudo pacman -Syu git ntfs-3g
-
 git clone https://aur.archlinux.org/paru.git
 
 cd paru
