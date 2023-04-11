@@ -7,7 +7,7 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font          = "monocraft 10"
+theme.font          = "sans 8"
 
 theme.bg_normal     = "#666666"
 theme.bg_focus      = "#666666"
@@ -64,7 +64,7 @@ theme.titlebar_maximized_button_focus_inactive  = themes_path.."default/titlebar
 theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
-theme.wallpaper = "~/.config/awesome/wallapapers/Wallpaper1.jpg"
+theme.wallpaper = "~/.config/awesome/wallpapers/Wallpaper1.jpg"
 
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"
 theme.layout_fairv = themes_path.."default/layouts/fairvw.png"

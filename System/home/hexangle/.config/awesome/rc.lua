@@ -221,7 +221,7 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     awful.key({ modkey },            "r",     function () 
-    awful.util.spawn("rofi -show run") end,
+    awful.util.spawn("rofi -show drun") end,
               {description = "run rofi", group = "launcher"}),
 
     awful.key({ modkey }, "p", function() menubar.show() end,
