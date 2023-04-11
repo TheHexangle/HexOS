@@ -45,7 +45,7 @@ lsblk (check parition table)
 ========================
 = Install Base Systems =
 ========================
-pacstrap /mnt base base-devel linux-zen linux-firmware grub efibootmgr neovim networkmanager
+pacstrap /mnt base base-devel linux-zen linux-firmware grub efibootmgr vim networkmanager
 =========
 = Fstab =
 =========
@@ -63,14 +63,14 @@ hwclock --systohc
 ================
 = Localization =
 ================
-nvim /etc/locale.gen (uncomment en_US.UTF-8 UTF-8)
+vim /etc/locale.gen (uncomment en_US.UTF-8 UTF-8)
 
 locale-gen
 
-nvim /etc/locale.conf (Add
+vim /etc/locale.conf (Add
 LANG=en_US.UTF-8)
 
-nvim /etc/hostname (Add hexarc)
+vim /etc/hostname (Add hexarc)
 
 passwd (make password)
 ============
@@ -80,7 +80,7 @@ useradd -m -G wheel -s /bin/bash hexangle
 
 passwd hexangle (make password)
 
-EDDITOR=nvim visudo (uncomment %wheel ALL=(ALL) ALL)
+EDDITOR=vim visudo (uncomment %wheel ALL=(ALL) ALL)
 ==================
 = Enable Daemons =
 ==================
@@ -126,7 +126,7 @@ git clone https://github.com/TheHexangle/HexArc
 =================
 = Pacman Config =
 =================
-sudo nvim /etc/pacman.conf (Uncommemt multilib)
+sudo vim /etc/pacman.conf (Uncommemt multilib)
 =======================
 = Install Base System =
 =======================
