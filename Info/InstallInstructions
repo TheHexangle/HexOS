@@ -127,15 +127,11 @@ git clone https://github.com/TheHexangle/HexArc
 = Pacman Config =
 =================
 sudo nvim /etc/pacman.conf (Uncommemt multilib)
-===================
-= Install Awesome =
-===================
-paru -S mesa amd-ucode xorg-xinit xorg-server awesome picom rofi lf alacritty htop neofetch pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
-
-nvim .xinitrc (add exec awesome)
-
-startx
+=======================
+= Install Base System =
+=======================
+paru -S mesa amd-ucode plasma sddm pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
 ====================
 = Install Programs =
 ====================
-paru -S discord steam obs-studio davinci-resolve gimp prismlauncher lunar-client minecraft-launcher onlyoffice-bin
+paru -S discord steam obs-studio davinci-resolve gimp prismlauncher lunar-client minecraft-launcher onlyoffice-bin zip unzip
