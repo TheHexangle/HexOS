@@ -49,8 +49,6 @@ pacstrap /mnt base base-devel linux-zen linux-firmware grub efibootmgr vim netwo
 =========
 = Fstab =
 =========
-genfstab /mnt
-
 genfstab /mnt > /mnt/etc/fstab
 ==========
 = Chroot =
@@ -69,7 +67,8 @@ vim /etc/locale.gen (uncomment en_US.UTF-8 UTF-8)
 
 locale-gen
 
-vim /etc/locale.conf (Add LANG=en_US.UTF-8)
+vim /etc/locale.conf (Add
+LANG=en_US.UTF-8)
 
 vim /etc/hostname (Add hexarc)
 
@@ -105,14 +104,16 @@ nmcli device wifi list
 
 nmcli device wifi connect (SSID_or_BSSID) password (password)
 
+sudo pacman -Syu git ntfs-3g
+
 vim /etc/fstab (Add 
 # /dev/sda1 
 UUID=01D96013265C5250   /mnt    ntfs    defaults        0 0 )
+
+sudo mount -a
 ================
 = Install PARU =
 ================
-pacman -Syu git
-
 git clone https://aur.archlinux.org/paru.git
 
 cd paru
@@ -121,12 +122,16 @@ makepkg -si
 
 cd
 
-rm paru
-===================
-= Install Awesome =
-===================
-paru -S mesa amd-ucode xorg-xinit awesome picom rofi lf alacritty htop neofetch pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
-
-vim .xinitrc (add exec awesome)
-
-startx
+git clone https://github.com/TheHexangle/HexArc
+=================
+= Pacman Config =
+=================
+sudo vim /etc/pacman.conf (Uncommemt multilib)
+=======================
+= Install Base System =
+=======================
+paru -S mesa amd-ucode plasma sddm pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
+====================
+= Install Programs =
+====================
+paru -S discord steam obs-studio davinci-resolve gimp prismlauncher lunar-client minecraft-launcher onlyoffice-bin zip unzip
