@@ -130,7 +130,7 @@ sudo vim /etc/pacman.conf (Uncommemt multilib)
 =======================
 = Install Base System =
 =======================
-paru -S mesa amd-ucode plasma sddm pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
+paru -S mesa amd-ucode plasma konsole dolphin sddm pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
 ====================
 = Install Programs =
 ====================
