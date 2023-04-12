@@ -134,4 +134,4 @@ paru -S mesa amd-ucode plasma konsole dolphin sddm pipewire-jack pipewire-alsa p
 ====================
 = Install Programs =
 ====================
-paru -S discord steam obs-studio davinci-resolve gimp prismlauncher lunar-client minecraft-launcher onlyoffice-bin zip unzip
+paru -S discord steam obs-studio davinci-resolve gimp vlc prismlauncher lunar-client minecraft-launcher onlyoffice-bin zip unzip
