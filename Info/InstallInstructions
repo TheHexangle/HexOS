@@ -130,8 +130,8 @@ sudo vim /etc/pacman.conf (Uncommemt multilib)
 =======================
 = Install Base System =
 =======================
-paru -S mesa amd-ucode plasma konsole dolphin sddm pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
+paru -S mesa amd-ucode plasma konsole ark dolphin kate sddm pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
 ====================
 = Install Programs =
 ====================
-paru -S discord steam obs-studio davinci-resolve gimp vlc prismlauncher-qt5-bin lunar-client minecraft-launcher onlyoffice-bin zip unzip
+paru -S discord steam obs-studio davinci-resolve gimp vlc prismlauncher-qt5-bin lunar-client minecraft-launcher onlyoffice-bin gitkraken
