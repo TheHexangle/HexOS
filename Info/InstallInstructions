@@ -134,4 +134,4 @@ paru -S mesa amd-ucode plasma konsole ark dolphin kate sddm pipewire-jack pipewi
 ====================
 = Install Programs =
 ====================
-paru -S discord steam obs-studio davinci-resolve gimp vlc prismlauncher-qt5-bin lunar-client minecraft-launcher onlyoffice-bin gitkraken
+paru -S discord steam obs-studio davinci-resolve gimp vlc lunar-client minecraft-launcher onlyoffice-bin
