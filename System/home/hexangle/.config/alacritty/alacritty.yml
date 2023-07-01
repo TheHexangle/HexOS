@@ -68,7 +68,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.6
+  opacity: 0.7
 
   # Startup Mode (changes require restart)
   #
@@ -122,8 +122,9 @@ window:
   #multiplier: 5
 
 # Font configuration
-#font:
+font:
   # Normal (roman) font face
+  #
   normal:
     # Font family
     #
@@ -131,7 +132,7 @@ window:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: sans
+    family: "MononokiNerdFont"
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -142,7 +143,7 @@ window:
     #
     # If the bold family is not specified, it will fall back to the
     # value specified for the normal font.
-    family: sans
+    family: monospace
 
     # The `style` can be specified to pick a specific face.
     #style: Bold
@@ -153,10 +154,10 @@ window:
     #
     # If the italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: sans
+    family: monospace
 
     # The `style` can be specified to pick a specific face.
-    style: Italic
+    #style: Italic
 
   # Bold italic font face
   bold_italic:
@@ -164,10 +165,10 @@ window:
     #
     # If the bold italic family is not specified, it will fall back to the
     # value specified for the normal font.
-    #family: sans
+    family: monospace
 
     # The `style` can be specified to pick a specific face.
-    style: Bold Italic
+    #style: Bold Italic
 
   # Point size
   size: 10.0
