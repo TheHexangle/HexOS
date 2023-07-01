@@ -118,4 +118,4 @@ git clone https://github.com/TheHexangle/HexArc
 =======================
 = Install Base System =
 =======================
-paru -S mesa amd-ucode pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
+paru -S mesa amd-ucode pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave hyprland waybar alacritty wofi swww nvim
