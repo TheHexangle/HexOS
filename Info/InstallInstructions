@@ -1,8 +1,8 @@
 ================
 = Arch Install =
-==============================================================
-= Connect to Internet (Ignore if you have an ethernet cable) =
-==============================================================
+=======================
+= Connect to Internet =
+=======================
 iwctl
 
 device list
@@ -54,9 +54,9 @@ genfstab /mnt > /mnt/etc/fstab
 = Chroot =
 ==========
 arch-chroot /mnt
-============
-= Time Zone=
-============
+=============
+= Time Zone =
+=============
 ln -sf /usr/share/zoneinfo/Amarica/Chicago /etc/localtime
 
 hwclock --systohc
@@ -103,14 +103,6 @@ reboot
 nmcli device wifi list
 
 nmcli device wifi connect (SSID_or_BSSID) password (password)
-
-sudo pacman -Syu git ntfs-3g
-
-vim /etc/fstab (Add 
-# /dev/sda1 
-UUID=01D96013265C5250   /mnt    ntfs    defaults        0 0 )
-
-sudo mount -a
 ================
 = Install PARU =
 ================
@@ -123,15 +115,7 @@ makepkg -si
 cd
 
 git clone https://github.com/TheHexangle/HexArc
-=================
-= Pacman Config =
-=================
-sudo vim /etc/pacman.conf (Uncommemt multilib)
 =======================
 = Install Base System =
 =======================
-paru -S mesa amd-ucode plasma sddm pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
-====================
-= Install Programs =
-====================
-paru -S discord steam obs-studio davinci-resolve gimp prismlauncher-bin lunar-client minecraft-launcher onlyoffice-bin cider-bin
+paru -S mesa amd-ucode pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
