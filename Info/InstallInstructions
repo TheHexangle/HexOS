@@ -115,7 +115,7 @@ makepkg -si
 cd
 
 git clone https://github.com/TheHexangle/HexArc
-=======================
-= Install Base System =
-=======================
-paru -S mesa amd-ucode pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave hyprland waybar alacritty wofi swww nvim
+====================
+= Install Programs =
+====================
+paru -Syu mesa amd-ucode pipewire-jack pipewire-alsa pipewire-pulse qjackctl hyprland waybar alacritty wofi swww nvim brave-bin discord betterdiscord-installer github-desktop steam prismlauncher minecraft-launcher lunar-client nbtexplorer davinci-resolve obs-studio gimp ardour filezilla vlc
