@@ -103,6 +103,8 @@ reboot
 nmcli device wifi list
 
 nmcli device wifi connect (SSID_or_BSSID) password (password)
+
+*Enable multilib repo in pacman.conf*
 ================
 = Install PARU =
 ================
@@ -118,4 +120,4 @@ git clone https://github.com/TheHexangle/HexArc
 ====================
 = Install Programs =
 ====================
-paru -Syu mesa amd-ucode pipewire-jack pipewire-alsa pipewire-pulse qjackctl hyprland waybar alacritty wofi swww nvim brave-bin discord betterdiscord-installer github-desktop steam prismlauncher minecraft-launcher lunar-client nbtexplorer davinci-resolve obs-studio gimp ardour filezilla vlc
+paru -Syu ntfs-3g mesa amd-ucode pipewire-jack pipewire-alsa pipewire-pulse qjackctl hyprland waybar alacritty wofi swww nvim brave-bin discord betterdiscord-installer github-desktop steam prismlauncher minecraft-launcher lunar-client nbtexplorer davinci-resolve obs-studio gimp ardour filezilla vlc
