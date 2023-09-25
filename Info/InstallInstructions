@@ -117,7 +117,21 @@ makepkg -si
 cd
 
 git clone https://github.com/TheHexangle/HexArc
+
 ====================
 = Install Programs =
 ====================
 paru -Syu ntfs-3g mesa amd-ucode pipewire-jack pipewire-alsa pipewire-pulse qjackctl hyprland waybar alacritty wofi swww nvim brave-bin discord betterdiscord-installer github-desktop steam prismlauncher minecraft-launcher lunar-client nbtexplorer davinci-resolve obs-studio gimp ardour filezilla vlc
+=======
+=================
+= Pacman Config =
+=================
+sudo vim /etc/pacman.conf (Uncommemt multilib)
+=======================
+= Install Base System =
+=======================
+paru -S mesa amd-ucode plasma konsole ark dolphin kate sddm pipewire-jack pipewire-alsa pipewire-pulse qjackctl brave
+====================
+= Install Programs =
+====================
+paru -S discord steam obs-studio davinci-resolve gimp vlc lunar-client minecraft-launcher onlyoffice-bin
