@@ -1,0 +1,13 @@
+# Static information about the filesystems.
+# See fstab(5) for details.
+
+# <file system> <dir> <type> <options> <dump> <pass>
+# /dev/sdb2
+UUID=a9e71f63-b098-483b-803f-ef238dc3920a	/         	ext4      	rw,relatime	0 1
+
+# /dev/sdb1
+UUID=C44D-B4BE      	/boot     	vfat      	rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro	0 2
+
+
+# MixDrive /dev/sda
+UUID=01D96013265C5250	/home/hexangle/MixDrive	ntfs	defaults	0	0
